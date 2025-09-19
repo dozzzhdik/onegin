@@ -2,7 +2,10 @@ all:
 	g++ main.cpp \
 		createstrptr.cpp \
 		output.cpp \
-		bubblesort.cpp \
+		bubblesortBEG.cpp \
+		bubblesortEND.cpp \
+		comparefromend.cpp \
+		notalphacounterEND.cpp \
 		-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef \
 		-Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations \
 		-Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain \
