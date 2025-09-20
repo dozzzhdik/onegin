@@ -10,6 +10,8 @@
 #include <string.h>
 #include <ctype.h>
 
+#define printf(...) ;
+
 int createstrptr(char* onegin, char** strptr);
 int output(char** strptr, int strcounter, FILE* oneginsorted);
 void bubblesortBEG(char** strptr, int strcounter);
@@ -18,6 +20,7 @@ int strcmpBEG(char* strptr1, char* strptr2);
 int nstrlen(char* str);
 int skipnotalphaBEG(char* str);
 int swap(char** strptr1, char** strptr2);
+char* stronlyletters(char* str);
 
 //int comparestr(const void* par1, const void* par2, int strcounter, char** strptr);
 
