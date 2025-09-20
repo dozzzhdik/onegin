@@ -2,7 +2,6 @@
 
 int output(char** strptr, int strcounter, FILE* oneginsorted)
 {
-    printf("\n");
     for(int i = 0; i < strcounter; i++)
     {
         for(int j = 0; strptr[i][j] != '\n'; j++)

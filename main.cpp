@@ -1,5 +1,8 @@
 #include "allfunctions.h"
 
+// свой ассерт
+// структуры
+
 int main()
 {
     int strcounter = 5096;
@@ -8,7 +11,7 @@ int main()
     char** strptr = (char**) (calloc(strcounter, sizeof(char*)));
     char* onegin = (char*) (calloc(numberofsymbols, sizeof(char)));
     FILE *onegintext = fopen("onegintext.txt","r");
-    FILE *oneginsorted = fopen("oneginsorted.txt", "w");
+    FILE *oneginsorted = fopen("onegsorted.txt", "w");
     fread(onegin, numberofsymbols, filestoread, onegintext);
 
     //puts(onegin);
@@ -16,19 +19,17 @@ int main()
     createstrptr(onegin, strptr);
     printf("strptr created succesfully!\n");
 
-//     bubblesortBEG(strptr, strcounter);
-//     printf("onegin is sorted from beggining!\n");
-//
-//     output(strptr, strcounter, oneginsorted);
-
-    bubblesortEND(strptr, strcounter);
-    printf("onegin is sorted from end!\n");
+    bubblesortBEG(strptr, strcounter);
+    printf("onegin is sorted from beggining!\n");
 
     output(strptr, strcounter, oneginsorted);
 
+//     bubblesortEND(strptr, strcounter);
+//     printf("onegin is sorted from end!\n");
+//
+//     output(strptr, strcounter, oneginsorted);
+
     //qsort(text, 5, sizeof(char*), comparestr(par1, par2, strptr, strcounter));
-
-
 
     //printf("First letter adress: %p\n", &strptr[0]);
     //printf("First letter: %s", (char*)(&strptr[0]));
@@ -39,7 +40,6 @@ int main()
 
     fclose(onegintext);
     fclose(oneginsorted);
-    printf("salam");
 
     free(onegin);
     free(strptr);

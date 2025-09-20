@@ -1,7 +1,7 @@
 #ifndef ALLFUNCTIONS_H
 #define ALLFUNCTIONS_H
 
-// #include <TXLib.h>
+//#include <TXLib.h>
 #include <stdio.h>
 #include <math.h>
 #include <cstdlib>
@@ -14,8 +14,10 @@ int createstrptr(char* onegin, char** strptr);
 int output(char** strptr, int strcounter, FILE* oneginsorted);
 void bubblesortBEG(char** strptr, int strcounter);
 void bubblesortEND(char** strptr, int strcounter);
-int comparefromend(char** strptr, int strcounter, int swapcounter);
-int notalphacounterEND(char* strptr);
+int strcmpBEG(char* strptr1, char* strptr2);
+int nstrlen(char* str);
+int skipnotalphaBEG(char* str);
+int swap(char** strptr1, char** strptr2);
 
 //int comparestr(const void* par1, const void* par2, int strcounter, char** strptr);
 
