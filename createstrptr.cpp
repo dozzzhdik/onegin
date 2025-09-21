@@ -7,7 +7,8 @@ int createstrptr(char* onegin, char** strptr)
     int strcounter = 0;
     char* ptronstr = onegin;
     strptr[strcounter] = onegin; // getting first element adress
-    while (strchr(&onegin[ptronstr - onegin], '\n') != NULL)
+    char* Optr = strchr(onegin, '\0');
+    while (ptronstr < Optr)
     {
         ptronstr = strchr((&onegin[ptronstr - onegin]), '\n') + 1;
         strcounter++;

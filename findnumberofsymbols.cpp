@@ -8,7 +8,7 @@ size_t findnumberofsymbols(FILE *onegintext)
     numberofsymbols = ftell(onegintext);
     fseek(onegintext, 0, SEEK_SET);
 
-    printf("numofsym: %d\n", numberofsymbols);
-    
+    printf("numberofsymbols: %d\n", numberofsymbols);
+
     return numberofsymbols;
 }

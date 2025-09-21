@@ -1,6 +1,6 @@
 #include "allfunctions.h"
 
-int nstrlen(char* str)
+int nstrlen(const char* str)
 {
     int i = 0;
     while (str[i] != '\n' && str[i] != '\0')

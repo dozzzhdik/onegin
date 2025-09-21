@@ -10,7 +10,7 @@ void bubblesortBEG(char** strptr, int strcounter)
         swapcounter = 0;
         for (int i = 0; i < strcounter - blyat; i++)
         {
-            if (strcmpBEG(strptr[i], strptr[i+1]) == 1)
+            if (strcmpEND(strptr[i], strptr[i+1]) == 1)
                 swapcounter += swap(&strptr[i], &strptr[i+1]);
             //printf("\nstrcmpBEG = %d\n\n", strcmpBEG(strptr[i], strptr[i+1]));
             //printf("swapcounter: %d\n", swapcounter);
