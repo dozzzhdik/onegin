@@ -18,7 +18,7 @@ int strcmpBEG(char* strptr1, char* strptr2) // получаем адрес на�
     //printf("skipped1 = %d\n", skipped1);
     //printf("skipped2 = %d\n", skipped2);
 
-    printf("cstrptr1 = %s\n", cstrptr1);
+    //printf("cstrptr1 = %s\n", cstrptr1);
 
     //printf("strptr[skipped] = %c\n", strptr1[skipped1]);
     int i = 0;
@@ -33,6 +33,6 @@ int strcmpBEG(char* strptr1, char* strptr2) // получаем адрес на�
         else
             i++;
     }
-    printf("strcmpBEG ended\n");
+    //printf("strcmpBEG ended\n");
     return 0;
 }

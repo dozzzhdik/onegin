@@ -17,6 +17,6 @@ void bubblesortBEG(char** strptr, int strcounter)
         }
         blyat++;
     }
-    printf("bubblesortBEG ended\n");
+    //printf("bubblesortBEG ended\n");
 }
 

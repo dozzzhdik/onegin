@@ -26,7 +26,7 @@ char* stronlyletters(char* str)
         //printf("adding to cstr");
         if (isalpha(str[i]))
         {
-            cstr[p] = tolower(str[i]);
+            cstr[p] = (char) tolower(str[i]);
             p++;
         }
         i++;

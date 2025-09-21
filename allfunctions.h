@@ -10,7 +10,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#define printf(...) ;
+//#define printf(...) ;
 
 int createstrptr(char* onegin, char** strptr);
 int output(char** strptr, int strcounter, FILE* oneginsorted);
@@ -21,6 +21,8 @@ int nstrlen(char* str);
 int skipnotalphaBEG(char* str);
 int swap(char** strptr1, char** strptr2);
 char* stronlyletters(char* str);
+int countstr(char* onegin);
+size_t findnumberofsymbols(FILE *onegintext);
 
 //int comparestr(const void* par1, const void* par2, int strcounter, char** strptr);
 
