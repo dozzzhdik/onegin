@@ -1,38 +1,91 @@
 #include "allfunctions.h"
 
-int strcmpBEG(char* strptr1, char* strptr2) // получаем адрес начала первой строки
+int strcmpBEG(char* str1, char* str2) // получаем адрес начала первой строки
 {
-    //char** strptr = (char**) (calloc(strcounter, sizeof(char*)));
+    int strlen1 = nstrlen(str1);
+    int strlen2 = nstrlen(str2);
 
-    char* cstrptr1 = stronlyletters(strptr1);
-    char* cstrptr2 = stronlyletters(strptr2);
-
-    //printf("strcmpBEG started\n");
-
-    // int skipped1 = skipnotalphaBEG(cstrptr1);
-    // int skipped2 = skipnotalphaBEG(cstrptr2);
-
-    int cstrlen1 = nstrlen(cstrptr1);
-    int cstrlen2 = nstrlen(cstrptr2);
-
-    //printf("skipped1 = %d\n", skipped1);
-    //printf("skipped2 = %d\n", skipped2);
-
-    //printf("cstrptr1 = %s\n", cstrptr1);
-
-    //printf("strptr[skipped] = %c\n", strptr1[skipped1]);
     int i = 0;
-    while (cstrlen1 > i && cstrlen2 > i)
+    int k = 0;
+
+    while(strlen1 > i && strlen2 > k)
     {
-        if (cstrptr1[i] > cstrptr2[i])
-            return 1;
-
-        else if (cstrptr1[i] < cstrptr2[i])
-            return -1;
-
-        else
+        while(!isalpha(str1[i]))
             i++;
+
+        while(!isalpha(str2[k]))
+            k++;
+
+        if (isupper(str1[i]) && !isupper(str1[k]))
+        {
+            if (tolower(str1[i]) > str2[k])
+                return 1;
+
+            else if (tolower(str1[i]) < str2[k])
+                return -1;
+        }
+        else if (!isupper(str1[i]) && isupper(str2[k]))
+        {
+            if (str1[i] > tolower(str2[k]))
+                return 1;
+
+            else if(str1[i] < tolower(str2[k]))
+                return -1;
+        }
+        else if (isupper(str2[k]) && isupper(str1[i]))
+        {
+            if (str1[i] > (str2[k]))
+                return 1;
+
+            else if(str1[i] < (str2[k]))
+                return -1;
+        }
+        else
+        {
+            if (str1[i] > (str2[k]))
+                return 1;
+
+            else if(str1[i] < (str2[k]))
+                return -1;
+        }
+
+        i++;
+        k++;
     }
-    //printf("strcmpBEG ended\n");
     return 0;
+
+                 //comparing by callocing only letters strings
+//     char* cstrptr1 = stronlyletters(strptr1);
+//     char* cstrptr2 = stronlyletters(strptr2);
+//
+//     //printf("strcmpBEG started\n");
+//
+//     // int skipped1 = skipnotalphaBEG(cstrptr1);
+//     // int skipped2 = skipnotalphaBEG(cstrptr2);
+//
+//     int cstrlen1 = nstrlen(cstrptr1);
+//     int cstrlen2 = nstrlen(cstrptr2);
+//
+//     //printf("skipped1 = %d\n", skipped1);
+//     //printf("skipped2 = %d\n", skipped2);
+//
+//     //printf("cstrptr1 = %s\n", cstrptr1);
+//
+//     //printf("strptr[skipped] = %c\n", strptr1[skipped1]);
+//     int i = 0;
+//     while (cstrlen1 > i && cstrlen2 > i)
+//     {
+//         if (cstrptr1[i] > cstrptr2[i])
+//             return 1;
+//
+//         else if (cstrptr1[i] < cstrptr2[i])
+//             return -1;
+//
+//         else
+//             i++;
+//     }
+//     //printf("strcmpBEG ended\n");
+//     // free(cstrptr1);
+//     // free(cstrptr2);
+//     return 0;
 }

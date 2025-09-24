@@ -29,17 +29,24 @@ int main()
     //onegin[numberofsymbols] = '\0';
 
     int strcounter = countstr(onegin);
-    printf("strcounter: %d\n", strcounter);
+    
     char** strptr = (char**) (calloc(strcounter + 1, sizeof(char*)));
 
     createstrptr(onegin, strptr);
     printf("strptr created succesfully!\n");
 
-    //bubblesortBEG(strptr, strcounter);
-    // printf("onegin has been sorted from beggining!\n");
-    printf("qsort started\n");
+    fputc('\n', oneginsorted);
+    fputs("Onegin sorted from the beggining:", oneginsorted);
+    fputc('\n', oneginsorted);
+    fputc('\n', oneginsorted);
 
+    printf("bubblesort started\n");
+    bubblesortBEG(strptr, strcounter);
+    printf("onegin has been sorted from the beggining!\n");
 
+    output(strptr, strcounter, oneginsorted);
+
+    fputc('\n', oneginsorted);
     // printf("str1 = %s\n", strptr[0]);
     // printf("str2 = %s\n", strptr[1]);
     //int (*compare) (const void* par1, const void* par2) = qsortEND;
@@ -47,9 +54,19 @@ int main()
     // const char* str1 = "apple";
     // const char* str2 = "banana";
     // printf("strcmp = %d\n", strcmpEND(str1, str2));
+    printf("qsort started\n");
     qsort(strptr, strcounter, sizeof(strptr[0]), qsortEND);
+    printf("onegin has been sorted from the end!\n");
 
-    printf("output started\n");
+    fputc('\n', oneginsorted);
+    fputc('\n', oneginsorted);
+    fputc('\n', oneginsorted);
+    fputs("Onegin sorted from the end:", oneginsorted);
+
+    fputc('\n', oneginsorted);
+    fputc('\n', oneginsorted);
+
+    printf("output qsort started\n");
     output(strptr, strcounter, oneginsorted);
 
     printf("programm works correctly!");

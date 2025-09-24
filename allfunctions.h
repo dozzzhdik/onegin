@@ -16,7 +16,6 @@
 int createstrptr(char* onegin, char** strptr);
 int output(char** strptr, int strcounter, FILE* oneginsorted);
 void bubblesortBEG(char** strptr, int strcounter);
-void bubblesortEND(char** strptr, int strcounter);
 int strcmpBEG(char* strptr1, char* strptr2);
 int nstrlen(const char* str);
 int skipnotalphaBEG(char* str);

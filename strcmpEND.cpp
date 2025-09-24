@@ -7,27 +7,27 @@ int strcmpEND(const char* str1, const char* str2)
 
     // printf("str1 = %s\n", str1);
     // printf("str2 = %s\n", str2);
-    int i = nstrlen(str1);
+    int i1 = nstrlen(str1);
     // printf("len1 = %d , str1 = %s\n", i, str1);
-    int k = nstrlen(str2);
+    int i2 = nstrlen(str2);
     // printf("k = %d\n", k);
-    while(i > 0 && k > 0)
+    while(i1 > 0 && i2 > 0)
     {
         //printf("while strcmpEND started\n");
-        while(!isalpha(str1[i]))
-            i--;
+        while(!isalpha(str1[i1]))
+            i1--;
 
-        while(!isalpha(str2[k]))
-            k--;
+        while(!isalpha(str2[i2]))
+            i2--;
 
-        if(str1[i] > str2[k])
+        if(str1[i1] > str2[i2])
             return 1;
 
-        else if(str1[i] < str2[k])
+        else if(str1[i1] < str2[i2])
             return -1;
 
-        i--;
-        k--;
+        i1--;
+        i2--; 
     }
     return 0;
 }
