@@ -12,6 +12,9 @@ all:
 		countstr.cpp \
 		qsortEND.cpp \
 		strcmpEND.cpp \
+		filesroutine.cpp \
+		closefilesandfreecallocs.cpp \
+		outputoriginalonegin.cpp \
 		-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef \
 		-Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations \
 		-Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain \

@@ -11,7 +11,7 @@ int countstr(char* onegin)
         nptr = strchr((&onegin[nptr - onegin]), '\n') + 1;
         strcounter++;
     }
-    
+
     printf("strcounter: %d\n", strcounter);
 
     return strcounter;

@@ -1,25 +1,25 @@
 #include "allfunctions.h"
 
-                          //with strchr
+//with strchr
 
-int createstrptr(char* onegin, char** strptr)
+int createstrptr(text_t *text)
 {
-    int strcounter = 0;
-    char* ptronstr = onegin;
-    strptr[strcounter] = onegin; // getting first element adress
-    char* Optr = strchr(onegin, '\0');
+    int linescounter = 0;
+    char* ptronstr = text->onegin;
+    char* Optr = strchr(text->onegin, '\0');
+    text->strptr[linescounter] = text->onegin; // getting first element's adress
     while (ptronstr < Optr)
     {
-        ptronstr = strchr((&onegin[ptronstr - onegin]), '\n') + 1;
-        strcounter++;
-        strptr[strcounter] = ptronstr;
-        //tolower(*strptr[strcounter]);
-        //printf("start of a new line has adress: %p\n", ptronstr);
+        ptronstr = strchr(ptronstr, '\n') + 1;
+        linescounter++;
+        text->strptr[linescounter] = ptronstr;
+        text->strptr_original_onegin[linescounter] = ptronstr;
+        //printf("start of a new line has adress: %p\n", text->strptr_original_onegin[linescounter]);
     }
     return 0;
 }
 
-                          //without strchr
+//without strchr
 
 // int createstrptr(char* onegin, char** strptr, size_t numberofsymbols)
 // {

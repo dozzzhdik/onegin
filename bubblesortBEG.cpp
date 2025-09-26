@@ -1,21 +1,20 @@
 #include "allfunctions.h"
 
-void bubblesortBEG(char** strptr, int strcounter)
+void bubblesortBEG(text_t *text)
 {
-    //printf("bubblesortBEG started\n");
     int swapcounter = 1;
-    int blyat = 1;
+    int j = 1;
     while (swapcounter > 0)
     {
         swapcounter = 0;
-        for (int i = 0; i < strcounter - blyat; i++)
+        for (int i = 0; i < text->strcounter - j; i++)
         {
-            if (strcmpBEG(strptr[i], strptr[i+1]) == 1)
-                swapcounter += swap(&strptr[i], &strptr[i+1]);
+            if (strcmpBEG(text->strptr[i+1], text->strptr[i+2]) == 1)
+                swapcounter += swap(&(text->strptr[i]), &(text->strptr[i+1]));
             //printf("\nstrcmpBEG = %d\n\n", strcmpBEG(strptr[i], strptr[i+1]));
             //printf("swapcounter: %d\n", swapcounter);
         }
-        blyat++;
+        j++;
     }
     //printf("bubblesortBEG ended\n");
 }
