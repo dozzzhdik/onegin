@@ -8,11 +8,8 @@ int main()
     filesroutine(&files, &text);
 
     createstrptr(&text);
-    printf("\nstrptr created succesfully!\n\n");
 
-    printf("bubblesort started\n");
     bubblesortBEG(&text);
-    printf("onegin has been sorted from the beggining!\n\n");
 
     printf("output bubblesort started\n");
     output(files, text);

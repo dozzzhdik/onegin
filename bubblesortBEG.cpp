@@ -2,6 +2,7 @@
 
 void bubblesortBEG(text_t *text)
 {
+    printf("bubblesort started\n");
     int swapcounter = 1;
     int j = 1;
     while (swapcounter > 0)
@@ -16,6 +17,6 @@ void bubblesortBEG(text_t *text)
         }
         j++;
     }
-    //printf("bubblesortBEG ended\n");
+    printf("onegin has been sorted from the beggining!\n\n");
 }
 

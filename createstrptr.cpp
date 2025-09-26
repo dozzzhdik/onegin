@@ -16,6 +16,7 @@ int createstrptr(text_t *text)
         text->strptr_original_onegin[linescounter] = ptronstr;
         //printf("start of a new line has adress: %p\n", text->strptr_original_onegin[linescounter]);
     }
+    printf("\nstrptr created succesfully!\n\n");
     return 0;
 }
 
