@@ -23,6 +23,8 @@ int main()
     output(files, text);
     printf("onegin is output to a file\n\n");
 
+    outputoriginalonegin(files, text);
+
     closefilesandfreecallocs(files, text);
 
     printf("programm works correctly!");

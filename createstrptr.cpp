@@ -8,6 +8,8 @@ int createstrptr(text_t *text)
     char* ptronstr = text->onegin;
     char* Optr = strchr(text->onegin, '\0');
     text->strptr[linescounter] = text->onegin; // getting first element's adress
+    text->strptr_original_onegin[linescounter] = text->onegin; // getting first element's adress
+    //printf("text->onegin = %d", *text->onegin);
     while (ptronstr < Optr)
     {
         ptronstr = strchr(ptronstr, '\n') + 1;

@@ -20,38 +20,10 @@ int strcmpBEG(char* str1, char* str2) // получаем адрес начал�
         while(!isalpha(str2[k]))
             k++;
 
-        if (isupper(str1[i]) && !isupper(str1[k]))
-        {
-            if (tolower(str1[i]) > str2[k])
-                return -1;
-
-            else if (tolower(str1[i]) < str2[k])
-                return 1;
-        }
-        else if (!isupper(str1[i]) && isupper(str2[k]))
-        {
-            if (str1[i] > tolower(str2[k]))
-                return -1;
-
-            else if(str1[i] < tolower(str2[k]))
-                return 1;
-        }
-        else if (isupper(str2[k]) && isupper(str1[i]))
-        {
-            if (str1[i] > (str2[k]))
-                return -1;
-
-            else if(str1[i] < (str2[k]))
-                return 1;
-        }
-        else
-        {
-            if (str1[i] > (str2[k]))
-                return -1;
-
-            else if(str1[i] < (str2[k]))
-                return 1;
-        }
+        if (tolower(str1[i]) > tolower(str2[k]))
+            return 1;
+        else if (tolower(str1[i]) < tolower(str2[k]))
+            return -1;
 
         i++;
         k++;
